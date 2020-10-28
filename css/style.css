@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap");
 @font-face {
   font-family: "Conv_AkzidenzGrotesk-BoldCond";
-  src: url("../../fonts/AkzidenzGrotesk-BoldCond.eot");
-  src: local("☺"), url("../../fonts/AkzidenzGrotesk-BoldCond.woff") format("woff"), url("../../fonts/AkzidenzGrotesk-BoldCond.ttf") format("truetype"), url("../../fonts/AkzidenzGrotesk-BoldCond.svg") format("svg");
+  src: url("fonts/AkzidenzGrotesk-BoldCond.eot");
+  src: local("☺"), url("../fonts/AkzidenzGrotesk-BoldCond.woff") format("woff"), url("fonts/AkzidenzGrotesk-BoldCond.ttf") format("truetype"), url("fonts/AkzidenzGrotesk-BoldCond.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -245,21 +245,24 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 
 .input {
-  border: 1px solid #000;
+  border: 2px solid #959595;
+  background-color: #252525;
   height: 50px;
   border-radius: 0 !important;
-  margin: 0px 0px 20px 0px;
   width: 100%;
+  color: #959595;
+  font-size: 15px;
   display: block;
-  padding: 0px 20px;
+  padding: 0px 18px;
 }
 .input.err {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 textarea.input {
   resize: none;
-  padding: 0px 0px;
+  padding: 10px 18px;
+  height: 100px;
 }
 
 .check {
@@ -1040,6 +1043,48 @@ header {
     top: 18px;
   }
 }
+.footer-body {
+  display: flex;
+  font-size: 0;
+  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .footer-body {
+    height: auto;
+    padding: 15px 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-body__column:first-child {
+    order: 2;
+  }
+  .footer-body__column:last-child {
+    order: 1;
+  }
+}
+
+.footer__text {
+  color: #4d4d4d;
+  font-size: 15px;
+  line-height: 25px;
+}
+.footer__text a {
+  text-decoration: underline;
+  color: #4d4d4d;
+}
+.footer__text a:hover {
+  text-decoration: none;
+}
+@media (max-width: 767.98px) {
+  .footer__text {
+    text-align: center;
+  }
+}
+
 .private {
   display: flex;
   font-size: 0;
@@ -1354,4 +1399,124 @@ header {
   font-size: 15px;
   line-height: 25px;
   padding: 0 15px 0 0;
+}
+
+.contacts {
+  padding: 80px 0 0 0;
+}
+@media (max-width: 767.98px) {
+  .contacts {
+    padding: 30px 0 0 0;
+  }
+}
+
+.contacts__title {
+  font-family: "Conv_AkzidenzGrotesk-BoldCond";
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0;
+}
+
+.contacts-body {
+  display: flex;
+  font-size: 0;
+  flex-wrap: wrap;
+}
+
+.contacts-body__column {
+  flex: 0 0 50%;
+  margin: 0 0 20px 0;
+}
+@media (max-width: 767.98px) {
+  .contacts-body__column {
+    flex: 1 1 100%;
+  }
+}
+
+.contacts-body__item {
+  font-size: 15px;
+  color: #000;
+  display: inline-block;
+  line-height: 27px;
+  padding: 0 0 0 35px;
+}
+
+.contacts-body__item--1 {
+  background: url("../img/contacts/01.svg") left no-repeat;
+}
+
+.contacts-body__item--2 {
+  background: url("../img/contacts/02.svg") left no-repeat;
+}
+
+.contacts-body__item--3 {
+  background: url("../img/contacts/03.svg") left no-repeat;
+}
+
+.contacts-social {
+  display: flex;
+  font-size: 0;
+}
+
+.contacts-social__item {
+  margin: 0 30px 0 0;
+}
+.contacts-social__item:last-child {
+  margin: 0;
+}
+
+.contacts-content {
+  display: flex;
+  font-size: 0;
+  background-color: #000;
+}
+@media (max-width: 767.98px) {
+  .contacts-content {
+    display: block;
+  }
+}
+
+.contacts-content__column {
+  flex: 0 0 50%;
+}
+
+.contacts-content__map {
+  height: 100%;
+}
+@media (max-width: 767.98px) {
+  .contacts-content__map {
+    height: 300px;
+  }
+}
+
+.contacts-content-form {
+  padding: 55px 60px;
+}
+@media (max-width: 767.98px) {
+  .contacts-content-form {
+    padding: 30px;
+  }
+}
+
+.contacts-content-form__title {
+  font-family: "Conv_AkzidenzGrotesk-BoldCond";
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0;
+  color: #fff;
+}
+
+.contacts-content-form-body {
+  max-width: 375px;
+}
+@media (max-width: 767.98px) {
+  .contacts-content-form-body {
+    max-width: none;
+  }
+}
+
+.contacts-content-form-line {
+  margin: 0 0 25px 0;
 }
